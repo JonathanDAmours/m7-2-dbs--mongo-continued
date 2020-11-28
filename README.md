@@ -30,6 +30,7 @@ Don't forget to provide an `_id` to each document. You could do that before gett
   price: 225,
   isBooked: false
 }
+
 ```
 
 ## Exercise 2 - Write that function!
@@ -82,3 +83,7 @@ You could always try to improve the FE as well. There some benefit/difficulty in
 <center>🟢 - Complete workshop (100%) - 🟢</center>
 
 ---
+
+```
+
+```

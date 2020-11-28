@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import Tippy from '@tippy.js/react';
-import VisuallyHidden from '@reach/visually-hidden';
-import seatImageSrc from '../assets/seat-available.svg';
-import { getRowName, getSeatNum, encodeSeatId } from '../helpers';
+import React from "react";
+import styled from "styled-components";
+import Tippy from "@tippy.js/react";
+import VisuallyHidden from "@reach/visually-hidden";
+import seatImageSrc from "../assets/seat-available.svg";
+import { getRowName, getSeatNum, encodeSeatId } from "../helpers";
 
-import UnstyledButton from './UnstyledButton';
-import { BookingContext } from './BookingContext';
+import UnstyledButton from "./UnstyledButton";
+import { BookingContext } from "./BookingContext";
 
 const Seat = ({ rowIndex, seatIndex, width, height, price, status }) => {
   const {
@@ -21,7 +21,7 @@ const Seat = ({ rowIndex, seatIndex, width, height, price, status }) => {
   return (
     <Tippy content={`Row ${rowName}, Seat ${seatNum} – $${price}`}>
       <Wrapper
-        disabled={status === 'unavailable'}
+        disabled={status === "unavailable"}
         onClick={() => {
           beginBookingProcess({ seatId, price });
         }}
@@ -29,7 +29,7 @@ const Seat = ({ rowIndex, seatIndex, width, height, price, status }) => {
         <VisuallyHidden>
           Seat number {seatNum} in Row {rowName}
         </VisuallyHidden>
-        <img src={seatImageSrc} alt='' style={{ width, height }} />
+        <img src={seatImageSrc} alt="" style={{ width, height }} />
       </Wrapper>
     </Tippy>
   );
